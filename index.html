@@ -1,0 +1,52 @@
+<!--
+Copyright (C) 2013 Davide Pani (info@davidepani.com)
+This file is part of Pong-SVG
+ 
+Pong-SVG is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or 
+any later version.
+
+Pong-SVG is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+ 
+You should have received a copy of the GNU General Public License
+along with Pong-SVG.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Pong-SVG</title>
+	<link rel="stylesheet" type="text/css" href="./css.css" />
+	<script type="text/javascript" src="./JS/Player.js"></script>
+	<script type="text/javascript" src="./JS/Pong.js"></script>
+	<script type="text/javascript" src="./JS/Court.js"></script>
+	<script type="text/javascript" src="./JS/Ball.js"></script>
+	<script type="text/javascript">  
+		window.onload=function(){
+			Pong.init();
+			document.onmousemove = Pong.mouseMove;
+		}
+	</script>
+</head>
+<body>
+    <div class="container theme-showcase">
+
+	<h2>Player A <span id="resultPlayerA">0</span> Vs <span id="resultPlayerB">0</span> Player B</h2>
+	<div id="pong">
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="court" width="600" height="350">
+			<circle id="ball" r="5" stroke-width="2" fill="black"></circle>
+			<rect id="playerA" width="10" height="50" fill="black"></rect>
+			<rect id="playerB" width="10" height="50" fill="black"></rect>
+		</svg>
+		<p>
+		    <button type="button" onclick="Pong.start();">Start</button>
+		    <button type="button" onclick="Pong.stop();">Stop</button>
+		    <button type="button" onclick="Pong.startGame();">Reset</button>
+		</p>
+	</div>
+	</body>
+</html>

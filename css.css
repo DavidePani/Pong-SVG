@@ -1,0 +1,17 @@
+#court{
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+}
+#actions{
+    margin-top: 15px;
+}
+#actions a{
+    border: 1px solid;
+    display: block;
+    float: left;
+    margin-right: 50px;
+    padding: 5px;
+}
+#actions .clear{
+    clear: both;
+}
